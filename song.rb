@@ -35,7 +35,7 @@ class Song
   # setters
 
 
-  # behaviour
+  # behaviours
 
 
 

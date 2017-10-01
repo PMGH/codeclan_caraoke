@@ -59,10 +59,12 @@ class Guest
 
 
   # setters
+
   def add_to_tab_total(drink)
     # increment tab_total by the drink price
     @tab_total += drink.price()
   end
+
 
   # behaviour
 
@@ -78,6 +80,7 @@ class Guest
   end
 
   def update_entry_paid()
+    # set entry_paid to true
     @entry_paid = true
   end
 

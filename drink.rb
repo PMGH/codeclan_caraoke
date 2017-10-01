@@ -18,4 +18,10 @@ class Drink
   end
 
 
+  # setters
+
+
+  # behaviours
+
+
 end
