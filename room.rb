@@ -73,7 +73,7 @@ class Room
   end
 
 
-  # behaviour
+  # behaviours
 
   def check_in_guests(guests)
     # create empty array
@@ -98,15 +98,24 @@ class Room
   end
 
   def check_favourite_song()
-    response = ""
+    # create empty array for responses
+    responses = []
 
     # block to check the favourite song of each guest in Room's @checked_in array
-    # returns "Whoo!" if found, or nil if not found
+    # adds "Whoo!" to responses if found, or nil if not found
     @checked_in.each { |guest|
-      @playlist.include?(guest.favourite_song()) ? response = "Whoo!" : response = nil
+      responses << "Whoo!" if @playlist.include?(guest.favourite_song())
     }
 
-    return response
+    if responses.length == 1
+      return responses.join('')
+    elsif
+      responses.length() > 1
+      # return the guest's responses
+      return responses.join(' ')
+    else
+      return nil
+    end
   end
 
   def check_out_guests(guests)

@@ -242,11 +242,24 @@ class TestRoom < MiniTest::Test
 
   def test_check_favourite_song__not_favourite()
     @guest1.pay_entry_fee(10)
+    @guest2.pay_entry_fee(10)
     @room3.check_in_guests(@guests)
 
+    expected = nil
     actual = @room3.check_favourite_song()
 
-    assert_nil(actual)
+    assert_equal(expected, actual)
+  end
+
+  def test_check_favourite_song__favourite_multiple()
+    @guest2.pay_entry_fee(5)
+    @guest3.pay_entry_fee(5)
+    @room4.check_in_guests(@guests)
+
+    expected = "Whoo! Whoo!"
+    actual = @room4.check_favourite_song()
+
+    assert_equal(expected, actual)
   end
 
 
