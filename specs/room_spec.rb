@@ -160,7 +160,7 @@ class TestRoom < MiniTest::Test
   end
 
 
-  # behaviour
+  # behaviours
 
   def test_check_in_guests__paid_entry()
     @guest1.pay_entry_fee(10)

@@ -79,7 +79,7 @@ class Room
     # create empty array
     refused_entry = []
 
-    # if there is enough space in the Room
+    # checks if there is enough space in the Room
     if guests.length() <= @spaces_available
       # has Guest paid the entry fee? (true/false)
       # if true: check them in
